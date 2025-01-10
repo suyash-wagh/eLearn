@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  coursesdb:
+    container_name: coursesdb
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=CoursesDB
+    restart: always
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_courses:/var/lib/postgresql/data/
